@@ -594,3 +594,50 @@ var directionsDisplay = new google.maps.DirectionsRenderer({ suppressMarkers: tr
 
 
             //}, "tracking")
+
+
+
+/*
+                            console.log(way)
+
+                            var wp
+                            var o
+                            var d
+
+                            for (var z = 0; z < way.length; z++) {
+                                wp = way[z]
+                                o = wp[0].location
+                                d = wp[wp.length - 1].location
+                                wp.shift()
+                                wp.pop()
+                                directionsService.route({
+                                    origin: o,
+                                    destination: d,
+                                    waypoints: wp,
+                                    optimizeWaypoints: true,
+                                    travelMode: google.maps.TravelMode.DRIVING
+                                }, function (response, status) {
+                                    debugger
+                                    if (status == google.maps.DirectionsStatus.OK) {
+                                        directionsDisplay.setDirections(response)
+                                        var dirs = response.routes[0].legs.length - 1
+                                        for (var mkrs = 0; mkrs < dirs; mkrs++) {
+                                            var leg = response.routes[0].legs[mkrs]
+                                            if (mkrs == 0) {
+                                                // VERDE
+                                                console.log('VERDE')
+                                                makeMarker(mkrs, leg.start_location, '00ff00', abecedario[mkrs]);
+                                            } else if (mkrs + 1 == dirs) {
+                                                // ROJO
+                                                console.log('ROJO')
+                                                makeMarker(mkrs, leg.end_location, 'ff0000', abecedario[mkrs]);
+                                            } else {
+                                                // DEFAULT
+                                                console.log('DEFAULT')
+                                                makeMarker(mkrs, leg.end_location, 'ff00ff', abecedario[mkrs]);
+                                            }
+                                        }
+                                    }
+                                })
+                            }
+                            */
